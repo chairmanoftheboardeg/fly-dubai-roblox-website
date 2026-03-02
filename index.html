@@ -4,308 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>flydubai Roblox — Under Construction</title>
-  <meta name="description" content="flydubai Roblox website is under construction. We apologize for any inconvenience and appreciate your understanding. Please check back soon." />
+  <meta name="description" content="Our website is currently undergoing scheduled maintenance. We apologize for any inconvenience and appreciate your understanding. Please check back soon." />
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="https://i.ibb.co/jkrfrFHz/fly-dubai-tail-removebg-preview.png" />
-
-  <style>
-    :root{
-      --fd-blue:#0B57A6;
-      --fd-blue-dark:#063A75;
-      --fd-sky:#0E7CCB;
-      --fd-orange:#F28C00;
-      --fd-cream:#FFF2C6;
-
-      --text:#0b1220;
-      --muted:#5c677a;
-
-      --card:#ffffff;
-      --border:rgba(8, 25, 55, .10);
-      --shadow:0 18px 50px rgba(4, 18, 38, .18);
-
-      --radius:18px;
-      --radius-lg:22px;
-      --max:1120px;
-    }
-
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
-      background:#f6f8fc;
-    }
-
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px;}
-
-    /* Announcement bar */
-    .announce{
-      background:var(--fd-cream);
-      border-bottom:1px solid rgba(0,0,0,.08);
-      color:#3a2b00;
-      font-weight:700;
-      letter-spacing:.15px;
-      font-size:14px;
-    }
-    .announce .wrap{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 18px;
-    }
-    .badge{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width:22px; height:22px;
-      border-radius:999px;
-      background:rgba(242,140,0,.18);
-      border:1px solid rgba(242,140,0,.35);
-      color:#7a4300;
-      flex:0 0 auto;
-      font-weight:900;
-    }
-
-    /* Header/Nav */
-    header{
-      background:var(--fd-blue);
-      color:#fff;
-      position:sticky;
-      top:0;
-      z-index:50;
-      box-shadow: 0 10px 30px rgba(4, 18, 38, .18);
-    }
-    .nav{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:14px 0;
-      gap:18px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      text-decoration:none;
-      white-space:nowrap;
-    }
-    .brand img{
-      height:28px;
-      width:auto;
-      display:block;
-      filter: drop-shadow(0 6px 18px rgba(0,0,0,.18));
-    }
-    .navlinks{
-      display:flex;
-      gap:16px;
-      align-items:center;
-      flex-wrap:wrap;
-      justify-content:flex-end;
-    }
-    .navlinks a{
-      text-decoration:none;
-      opacity:.92;
-      font-weight:600;
-      font-size:14px;
-      padding:8px 10px;
-      border-radius:10px;
-      transition:.15s ease;
-    }
-    .navlinks a:hover{background:rgba(255,255,255,.10); opacity:1}
-    .navlinks .pill{
-      border:1px solid rgba(255,255,255,.25);
-      padding:8px 12px;
-      border-radius:999px;
-    }
-
-    /* Hero */
-    .hero{
-      background:
-        radial-gradient(900px 380px at 65% 10%, rgba(255,255,255,.20), rgba(255,255,255,0) 60%),
-        linear-gradient(180deg, var(--fd-sky), var(--fd-blue) 55%, var(--fd-blue-dark));
-      color:#fff;
-      padding:44px 0 64px;
-      position:relative;
-      overflow:hidden;
-    }
-    .hero .grid{
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:22px;
-      align-items:center;
-    }
-    .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      background:rgba(255,255,255,.12);
-      border:1px solid rgba(255,255,255,.20);
-      padding:8px 12px;
-      border-radius:999px;
-      font-weight:700;
-      font-size:13px;
-      letter-spacing:.25px;
-      width:max-content;
-    }
-    .dot{
-      width:10px;height:10px;border-radius:999px;background:var(--fd-orange);
-      box-shadow:0 0 0 6px rgba(242,140,0,.18);
-    }
-    h1{
-      margin:14px 0 10px;
-      font-size:clamp(30px, 4.2vw, 48px);
-      line-height:1.08;
-      letter-spacing:-.6px;
-    }
-    .lead{
-      margin:0 0 18px;
-      font-size:16px;
-      line-height:1.5;
-      opacity:.95;
-      max-width:62ch;
-    }
-
-    .cta{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:14px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid transparent;
-      text-decoration:none;
-      font-weight:800;
-      font-size:14px;
-      transition:.15s ease;
-      user-select:none;
-    }
-    .btn.primary{
-      background:var(--fd-orange);
-      color:#1a1200;
-      box-shadow:0 16px 30px rgba(242,140,0,.25);
-    }
-    .btn.primary:hover{transform:translateY(-1px); filter:saturate(1.05)}
-    .btn.ghost{
-      background:rgba(255,255,255,.12);
-      color:#fff;
-      border-color:rgba(255,255,255,.22);
-    }
-    .btn.ghost:hover{background:rgba(255,255,255,.18)}
-
-    /* Card */
-    .card{
-      background:rgba(255,255,255,.98);
-      color:var(--text);
-      border-radius:var(--radius-lg);
-      box-shadow:var(--shadow);
-      border:1px solid rgba(255,255,255,.55);
-      overflow:hidden;
-    }
-    .cardTop{
-      padding:16px 16px 12px;
-      border-bottom:1px solid var(--border);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
-    }
-    .cardTop strong{font-size:14px}
-    .cardBody{padding:16px}
-    .notice{
-      border:1px solid rgba(6,58,117,.18);
-      border-radius:16px;
-      padding:14px;
-      background:linear-gradient(180deg, rgba(11,87,166,.06), rgba(11,87,166,.02));
-    }
-    .notice h2{
-      margin:0 0 8px;
-      font-size:16px;
-      letter-spacing:-.2px;
-    }
-    .notice p{
-      margin:0;
-      color:var(--muted);
-      line-height:1.5;
-      font-size:14px;
-    }
-    .note{
-      margin:12px 0 0;
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.5;
-    }
-
-    /* Footer */
-    footer{
-      background:#fff;
-      border-top:1px solid var(--border);
-    }
-    .footTop{
-      padding:22px 0 16px;
-    }
-    .footBrand{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      flex-wrap:wrap;
-    }
-    .footBrand img{
-      height:22px;
-      width:auto;
-      display:block;
-    }
-    .footLinks{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      align-items:center;
-      justify-content:flex-end;
-    }
-    .footLinks a{
-      text-decoration:none;
-      color:var(--fd-blue);
-      font-weight:800;
-      font-size:13px;
-      padding:8px 10px;
-      border-radius:12px;
-      border:1px solid rgba(11,87,166,.14);
-      background:rgba(11,87,166,.04);
-    }
-    .footLinks a:hover{background:rgba(11,87,166,.08)}
-    .footBottom{
-      background:linear-gradient(180deg, var(--fd-blue), var(--fd-blue-dark));
-      color:#dbe8ff;
-      padding:14px 0;
-      font-size:12px;
-    }
-    .footBottom .wrap{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:14px;
-      flex-wrap:wrap;
-    }
-    .small{opacity:.95; line-height:1.45; max-width:78ch;}
-    .mutedLink{color:#fff; opacity:.9}
-
-    @media (max-width: 900px){
-      .hero .grid{grid-template-columns: 1fr; }
-      .navlinks{display:none;}
-    }
-  </style>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
+  <!-- Loading (index only) -->
+  <div class="loading-overlay" id="loading" aria-label="Loading">
+    <div class="loader">
+      <div class="spinner" aria-hidden="true"></div>
+      <small>Loading…</small>
+    </div>
+  </div>
+
   <!-- Announcement Bar -->
   <div class="announce" role="status" aria-live="polite">
     <div class="wrap">
@@ -318,20 +31,27 @@
   <header>
     <div class="wrap">
       <div class="nav">
-        <a class="brand" href="./" aria-label="flydubai Roblox home">
+        <a class="brand" href="./index.html" aria-label="flydubai Roblox home">
           <img
             src="https://cdn.uc.assets.prezly.com/27f31c96-ae55-47ef-824f-c497bbb4696d/-/quality/best/-/format/auto/"
             alt="flydubai"
           />
         </a>
 
-        <nav class="navlinks" aria-label="Primary">
-          <a href="./" class="pill">Home</a>
-          <a href="#" aria-disabled="true" title="Unavailable during maintenance">Book &amp; manage</a>
-          <a href="#" aria-disabled="true" title="Unavailable during maintenance">Flying with us</a>
-          <a href="#" aria-disabled="true" title="Unavailable during maintenance">Destinations</a>
-          <a href="#" aria-disabled="true" title="Unavailable during maintenance">Help</a>
+        <!-- All these go to 404.html -->
+        <nav class="nav-center" aria-label="Primary navigation">
+          <a href="./404.html">Book and manage</a>
+          <a href="./404.html">Flying with us</a>
+          <a href="./404.html">Destinations</a>
+          <a href="./404.html">Skywards</a>
+          <a href="./404.html">Help</a>
         </nav>
+
+        <div class="nav-right" aria-label="Utilities">
+          <a class="nav-pill" href="./404.html" title="Search">Search</a>
+          <a class="nav-pill" href="./404.html" title="Language">EN</a>
+          <a class="nav-pill" href="./404.html" title="Login">Log in</a>
+        </div>
       </div>
     </div>
   </header>
@@ -339,76 +59,113 @@
   <!-- Hero -->
   <section class="hero">
     <div class="wrap">
-      <div class="grid">
-        <div>
-          <div class="kicker"><span class="dot"></span> Emirates Group Roblox • Tyler Nicholas Group</div>
-          <h1>Website under construction.</h1>
-          <p class="lead">
-            Our flydubai Roblox website is currently undergoing scheduled maintenance.
-            We apologize for any inconvenience and appreciate your understanding.
-            Please check back soon.
-          </p>
+      <div class="hero-inner">
+        <div class="kicker"><span class="dot"></span> Emirates Group Roblox • Tyler Nicholas Group</div>
 
-          <div class="cta">
-            <a class="btn primary" href="https://emiratesgrouproblox.link" target="_blank" rel="noopener">
-              Emirates Group Roblox
-            </a>
-            <a class="btn ghost" href="https://tylernicholasgroup.com" target="_blank" rel="noopener">
-              Tyler Nicholas Group
-            </a>
-          </div>
+        <h1>Website under construction.</h1>
+        <p>
+          Our website is currently undergoing scheduled maintenance. We apologize for any inconvenience and appreciate your understanding.
+          Please check back soon.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="https://emiratesgrouproblox.link" target="_blank" rel="noopener">Emirates Group Roblox</a>
+          <a class="btn ghost" href="https://tylernicholasgroup.com" target="_blank" rel="noopener">Tyler Nicholas Group</a>
         </div>
-
-        <aside class="card" aria-label="Maintenance notice">
-          <div class="cardTop">
-            <strong>Maintenance notice</strong>
-            <strong aria-hidden="true" style="opacity:.65; font-size:12px;">Status</strong>
-          </div>
-          <div class="cardBody">
-            <div class="notice">
-              <h2>We’ll be back soon</h2>
-              <p>
-                Some pages and features may be unavailable while we complete updates.
-                Thank you for your patience.
-              </p>
-            </div>
-            <p class="note">
-              This is a fan-made Roblox community website. Not affiliated with or endorsed by flydubai or The Emirates Group.
-            </p>
-          </div>
-        </aside>
       </div>
     </div>
   </section>
 
-  <footer>
-    <div class="footTop">
-      <div class="wrap">
-        <div class="footBrand">
-          <img src="https://www.flydubai.com/v2/_next/static/media/flydubai-onwhite-en.a1c94203.svg" alt="flydubai" />
-          <div class="footLinks">
-            <a href="./">Home</a>
-            <a href="https://emiratesgrouproblox.link" target="_blank" rel="noopener">Emirates Group Roblox</a>
-            <a href="https://tylernicholasgroup.com" target="_blank" rel="noopener">Tyler Nicholas Group</a>
+  <!-- Footer (like screenshot vibe) -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="wrap footer-top-grid">
+        <div class="newsletter">
+          <p class="footer-title">Sign up</p>
+          <p class="footer-sub">for our newsletter, special offers, and more</p>
+
+          <form class="newsletter-form" action="#" method="post">
+            <input type="email" name="email" placeholder="Enter your email address" autocomplete="email" />
+            <button type="submit">Sign up</button>
+          </form>
+        </div>
+
+        <div class="appbox">
+          <p class="footer-title">Experience the flydubai app</p>
+          <p class="footer-sub">Book flights online, check in, choose seats and meals</p>
+
+          <div class="badges">
+            <a class="store-badge" href="./404.html">Download on the App Store</a>
+            <a class="store-badge" href="./404.html">Get it on Google Play</a>
           </div>
+
+          <div class="rating">★ ★ ★ ★ ☆ &nbsp; 4.4/5 based on reviews</div>
         </div>
       </div>
     </div>
 
-    <div class="footBottom">
-      <div class="wrap">
-        <div class="small">
-          © <span id="year"></span> flydubai Roblox. All rights reserved.
+    <div class="footer-links">
+      <div class="wrap footer-links-grid">
+        <div class="footer-brand">
+          <img src="https://www.flydubai.com/v2/_next/static/media/flydubai-onwhite-en.a1c94203.svg" alt="flydubai footer logo" />
+          <p>
+            © <span id="year"></span> flydubai Roblox. All rights reserved. This website is part of the wider community network under
+            <a href="https://emiratesgrouproblox.link" target="_blank" rel="noopener">Emirates Group Roblox</a> and the
+            <a href="https://tylernicholasgroup.com" target="_blank" rel="noopener">Tyler Nicholas Group</a>.
+            For updates and announcements, please visit those official community hubs.
+          </p>
         </div>
-        <div class="small">
-          Updates: <a class="mutedLink" href="https://emiratesgrouproblox.link" target="_blank" rel="noopener">Emirates Group Roblox</a>
+
+        <div class="linkcol">
+          <h4>Book</h4>
+          <a href="./404.html">Book a flight</a>
+          <a href="./404.html">Offers</a>
+          <a href="./404.html">Destinations</a>
+          <a href="./404.html">Baggage</a>
         </div>
+
+        <div class="linkcol">
+          <h4>Manage</h4>
+          <a href="./404.html">Manage your booking</a>
+          <a href="./404.html">Online check-in</a>
+          <a href="./404.html">Flight status</a>
+          <a href="./404.html">Contact us</a>
+        </div>
+
+        <div class="linkcol">
+          <h4>More</h4>
+          <a href="./404.html">FAQs</a>
+          <a href="./404.html">Policies</a>
+          <a href="./404.html">Terms and conditions</a>
+          <a href="./404.html">Help</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="wrap footer-bottom-row">
+        <div class="social" aria-label="Social links">
+          <a href="./404.html">Facebook</a>
+          <a href="./404.html">X</a>
+          <a href="./404.html">Instagram</a>
+          <a href="./404.html">YouTube</a>
+          <a href="./404.html">LinkedIn</a>
+        </div>
+        <div class="tiny">Maintenance mode • Please check back soon</div>
       </div>
     </div>
   </footer>
 
   <script>
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Loading overlay (index only)
+    window.addEventListener("load", () => {
+      const el = document.getElementById("loading");
+      // small delay = feels smoother
+      setTimeout(() => el.classList.add("hide"), 250);
+    });
   </script>
 </body>
 </html>
