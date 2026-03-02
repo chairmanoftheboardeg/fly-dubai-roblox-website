@@ -259,201 +259,118 @@ header{
 }
 .btn.ghost:hover{background:rgba(255,255,255,.18)}
 
-/* =========================
-   Footer (like screenshot vibe)
-========================= */
+/* ===== Footer (simplified) ===== */
 .site-footer{
-  background:var(--fd-blue);
-  color:#dbe8ff;
-  margin-top:0;
-}
-
-/* extra height so there is no white gap under footer */
-.site-footer{
-  padding-bottom:24px;
-}
-
-.footer-top{
-  padding:34px 0 26px;
-  border-bottom:1px solid rgba(255,255,255,.14);
-}
-
-.footer-top-grid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:26px;
-  align-items:start;
-}
-
-.footer-title{
-  margin:0 0 6px;
-  font-size:22px;
-  letter-spacing:-.3px;
-  color:#fff;
-  font-weight:900;
-}
-.footer-sub{
-  margin:0 0 12px;
-  opacity:.92;
-  line-height:1.45;
-  font-weight:600;
-}
-
-.newsletter{
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:22px;
-  padding:18px;
-}
-
-.newsletter-form{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:10px;
-}
-.newsletter-form input{
-  flex:1 1 240px;
-  padding:12px 12px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,.22);
-  background:rgba(255,255,255,.10);
-  color:#fff;
-  outline:none;
-}
-.newsletter-form input::placeholder{color:rgba(255,255,255,.75)}
-.newsletter-form button{
-  padding:12px 14px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,.20);
-  background:rgba(255,255,255,.18);
-  color:#fff;
-  font-weight:900;
-  cursor:pointer;
-  transition:.15s ease;
-}
-.newsletter-form button:hover{background:rgba(255,255,255,.26)}
-
-.appbox{
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.14);
-  border-radius:22px;
-  padding:18px;
-}
-.badges{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:10px;
-}
-.store-badge{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:10px 12px;
-  border-radius:14px;
-  background:rgba(0,0,0,.18);
-  border:1px solid rgba(255,255,255,.16);
-  color:#fff;
-  text-decoration:none;
-  font-weight:900;
-  font-size:13px;
-}
-.rating{
-  margin-top:10px;
-  font-weight:800;
-  opacity:.95;
-  font-size:13px;
+  background: var(--fd-blue);
+  color: #dbe8ff;
+  padding-bottom: 26px; /* makes footer feel taller */
 }
 
 .footer-links{
-  padding:26px 0 18px;
+  padding: 28px 0 18px;
 }
+
 .footer-links-grid{
-  display:grid;
-  grid-template-columns: 1.2fr repeat(3, 1fr);
-  gap:22px;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr 1fr 1fr;
+  gap: 22px;
 }
 
 .footer-brand img{
-  height:28px;
-  width:auto;
-  display:block;
-  margin-bottom:12px;
+  height: 28px;
+  width: auto;
+  display: block;
+  margin-bottom: 12px;
 }
+
 .footer-brand p{
-  margin:0;
-  line-height:1.55;
-  opacity:.95;
-  max-width:70ch;
-  font-weight:600;
+  margin: 0;
+  line-height: 1.55;
+  opacity: .95;
+  font-weight: 600;
+  max-width: 75ch;
 }
+
 .footer-brand a{
-  color:#fff;
-  text-decoration:underline;
-  text-decoration-thickness:2px;
-  text-underline-offset:3px;
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 .linkcol h4{
-  margin:0 0 10px;
-  font-size:14px;
-  color:#fff;
-  font-weight:900;
-  letter-spacing:.2px;
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: .2px;
 }
+
 .linkcol a{
-  display:block;
-  padding:7px 0;
-  text-decoration:none;
-  color:#dbe8ff;
-  opacity:.95;
-  font-weight:700;
+  display: block;
+  padding: 7px 0;
+  text-decoration: none;
+  color: #dbe8ff;
+  opacity: .95;
+  font-weight: 700;
 }
+
 .linkcol a:hover{
-  color:#fff;
-  opacity:1;
-  text-decoration:underline;
-  text-underline-offset:3px;
+  color: #fff;
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .footer-bottom{
-  border-top:1px solid rgba(255,255,255,.14);
-  padding:14px 0;
+  border-top: 1px solid rgba(255,255,255,.14);
+  padding: 14px 0 6px;
 }
 
 .footer-bottom-row{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  flex-wrap:wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .social{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  align-items:center;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
 }
+
 .social a{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  text-decoration:none;
-  color:#fff;
-  opacity:.92;
-  font-weight:900;
-  font-size:13px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  opacity: .92;
+  font-weight: 900;
+  font-size: 13px;
 }
-.social a:hover{opacity:1; text-decoration:underline; text-underline-offset:3px}
+
+.social a:hover{
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
 .tiny{
-  font-size:12px;
-  opacity:.92;
-  font-weight:700;
+  font-size: 12px;
+  opacity: .92;
+  font-weight: 700;
 }
 
+/* Responsive footer */
+@media (max-width: 980px){
+  .footer-links-grid{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 740px){
+  .footer-links-grid{ grid-template-columns: 1fr; }
+}
 /* =========================
    404 Card
 ========================= */
