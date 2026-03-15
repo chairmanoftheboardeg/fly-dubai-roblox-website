@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Development | flydubai Roblox</title>
+    <title>Under Renovation | flydubai Roblox</title>
     
     <link rel="icon" href="https://cdn.uc.assets.prezly.com/27f31c96-ae55-47ef-824f-c497bbb4696d/-/quality/best/-/format/auto/" type="image/png">
     
@@ -12,11 +12,11 @@
 
     <style>
         :root {
-            --bg-deep-navy: #06101e;
-            --fly-orange: #FF5A00;
+            --bg-deep-navy: #040b14; /* Even darker navy for better contrast */
             --fly-blue: #00A9CE;
+            --fly-blue-glow: rgba(0, 169, 206, 0.4);
             --text-white: #ffffff;
-            --text-muted: #a0aec0;
+            --text-muted: #8b9bb4;
         }
 
         * {
@@ -36,7 +36,7 @@
             overflow-x: hidden;
         }
 
-        h1, h2 {
+        h1, h2, h3 {
             font-family: 'Space Grotesk', sans-serif;
         }
 
@@ -49,48 +49,49 @@
             align-items: center;
             padding: 2rem 5%;
             text-align: center;
-            background: radial-gradient(circle at center, rgba(0, 169, 206, 0.05) 0%, transparent 60%);
+            background: radial-gradient(circle at center, rgba(0, 169, 206, 0.08) 0%, transparent 65%);
         }
 
         .logo-container {
-            margin-bottom: 3rem;
-            animation: pulseLogo 3s infinite ease-in-out;
+            margin-bottom: 3.5rem;
+            animation: pulseLogo 4s infinite ease-in-out;
         }
 
         .logo-container img {
-            height: 120px;
+            height: 130px;
             max-width: 100%;
             object-fit: contain;
             filter: drop-shadow(0 0 20px rgba(0, 169, 206, 0.2));
         }
 
         @keyframes pulseLogo {
-            0% { transform: scale(1); filter: drop-shadow(0 0 15px rgba(0, 169, 206, 0.2)); }
-            50% { transform: scale(1.05); filter: drop-shadow(0 0 25px rgba(255, 90, 0, 0.3)); }
-            100% { transform: scale(1); filter: drop-shadow(0 0 15px rgba(0, 169, 206, 0.2)); }
+            0% { transform: scale(1); filter: drop-shadow(0 0 15px rgba(0, 169, 206, 0.1)); }
+            50% { transform: scale(1.03); filter: drop-shadow(0 0 30px var(--fly-blue-glow)); }
+            100% { transform: scale(1); filter: drop-shadow(0 0 15px rgba(0, 169, 206, 0.1)); }
         }
 
         .status-badge {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            background: rgba(255, 90, 0, 0.1);
-            color: var(--fly-orange);
+            background: rgba(0, 169, 206, 0.1);
+            color: var(--fly-blue);
             padding: 0.6rem 1.5rem;
             border-radius: 50px;
             font-size: 0.9rem;
             font-weight: 800;
             letter-spacing: 1px;
             text-transform: uppercase;
-            border: 1px solid rgba(255, 90, 0, 0.3);
+            border: 1px solid rgba(0, 169, 206, 0.3);
             margin-bottom: 1.5rem;
             animation: fadeInUp 1s ease-out;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
             color: var(--text-white);
+            letter-spacing: -1px;
             animation: fadeInUp 1s ease-out 0.2s both;
         }
 
@@ -103,31 +104,46 @@
 
         /* --- FOOTER --- */
         .site-footer {
-            background-color: #030811;
-            padding: 2rem 5%;
+            background-color: #02060b;
+            padding: 2.5rem 5%;
             text-align: center;
-            border-top: 2px solid var(--fly-orange);
+            border-top: 2px solid var(--fly-blue);
             animation: fadeInUp 1s ease-out 0.6s both;
+            box-shadow: 0 -10px 30px rgba(0, 169, 206, 0.05);
+        }
+
+        .corporate-structure {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .corporate-structure span {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .corporate-structure a {
+            color: var(--fly-blue);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .corporate-structure a:hover {
+            color: var(--text-white);
+            text-shadow: 0 0 10px var(--fly-blue-glow);
         }
 
         .disclaimer-text {
-            color: var(--text-muted);
-            font-size: 0.85rem;
+            color: rgba(139, 155, 180, 0.6);
+            font-size: 0.8rem;
             line-height: 1.8;
             max-width: 800px;
             margin: 0 auto;
-        }
-
-        .disclaimer-text a {
-            color: var(--fly-blue);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .disclaimer-text a:hover {
-            color: var(--fly-orange);
-            text-decoration: underline;
         }
 
         /* --- KEYFRAMES --- */
@@ -139,6 +155,7 @@
         @media (max-width: 600px) {
             h1 { font-size: 2.2rem; }
             .logo-container img { height: 90px; }
+            .corporate-structure span { font-size: 0.85rem; }
         }
     </style>
 </head>
@@ -150,16 +167,20 @@
         </div>
 
         <div class="status-badge">
-            <i class="fa-solid fa-person-digging"></i> Website Under Development
+            <i class="fa-solid fa-server"></i> System Under Renovation
         </div>
 
         <h1>Preparing for Takeoff.</h1>
-        <p class="subtitle">Please check back soon. We apologize for the inconvenience this may cause as we upgrade our digital infrastructure.</p>
+        <p class="subtitle">Our digital infrastructure is currently undergoing maintenance and upgrades. We apologize for the inconvenience and will be airborne shortly.</p>
     </main>
 
     <footer class="site-footer">
+        <div class="corporate-structure">
+            <span>Official Subsidiary of <a href="https://emiratesgrouproblox.link" target="_blank">Emirates Group Roblox</a></span>
+            <span>Owned & Operated by <a href="https://tylernicholasgroup.com" target="_blank">Tyler Nicholas Group</a></span>
+        </div>
         <div class="disclaimer-text">
-            &copy; 2026 flydubai Roblox. All rights reserved. This website is part of the <a href="https://tylernicholasgroup.com" target="_blank">Tyler Nicholas Group</a> community network and <a href="https://emiratesgrouproblox.link" target="_blank">Emirates Group Roblox</a>. For official community updates, announcements, and access to related projects, please visit <a href="https://tylernicholasgroup.com" target="_blank">tylernicholasgroup.com</a> and <a href="https://emiratesgrouproblox.link" target="_blank">emiratesgrouproblox.link</a>.
+            &copy; 2026 flydubai Roblox. All rights reserved. For official community updates, announcements, and access to related operations, please visit our parent networks.
         </div>
     </footer>
 
