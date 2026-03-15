@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Flight Diverted | flydubai Roblox</title>
+    <title>404 - Radar Contact Lost | flydubai Roblox</title>
     
     <link rel="icon" href="https://cdn.uc.assets.prezly.com/27f31c96-ae55-47ef-824f-c497bbb4696d/-/quality/best/-/format/auto/" type="image/png">
     
@@ -12,11 +12,11 @@
 
     <style>
         :root {
-            --bg-deep-navy: #06101e;
-            --fly-orange: #FF5A00;
+            --bg-deep-navy: #040b14;
             --fly-blue: #00A9CE;
+            --fly-blue-glow: rgba(0, 169, 206, 0.4);
             --text-white: #ffffff;
-            --text-muted: #a0aec0;
+            --text-muted: #8b9bb4;
         }
 
         * {
@@ -36,7 +36,7 @@
             overflow-x: hidden;
         }
 
-        h1, h2 {
+        h1, h2, h3 {
             font-family: 'Space Grotesk', sans-serif;
         }
 
@@ -49,14 +49,15 @@
             align-items: center;
             padding: 2rem 5%;
             text-align: center;
-            background: radial-gradient(circle at center, rgba(255, 90, 0, 0.05) 0%, transparent 60%);
+            background: radial-gradient(circle at center, rgba(0, 169, 206, 0.08) 0%, transparent 65%);
         }
 
         .error-icon {
             font-size: 5rem;
-            color: var(--fly-orange);
+            color: var(--fly-blue);
             margin-bottom: 1rem;
             animation: float 3s infinite ease-in-out;
+            filter: drop-shadow(0 0 15px var(--fly-blue-glow));
         }
 
         @keyframes float {
@@ -66,16 +67,17 @@
         }
 
         h1.error-code {
-            font-size: 6rem;
+            font-size: 7rem;
             line-height: 1;
             margin-bottom: 0.5rem;
             color: var(--fly-blue);
-            text-shadow: 0 0 20px rgba(0, 169, 206, 0.3);
+            text-shadow: 0 0 30px var(--fly-blue-glow);
             animation: fadeInUp 1s ease-out;
+            letter-spacing: -2px;
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 1rem;
             color: var(--text-white);
             animation: fadeInUp 1s ease-out 0.2s both;
@@ -85,57 +87,74 @@
             font-size: 1.15rem;
             color: var(--text-muted);
             max-width: 500px;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             animation: fadeInUp 1s ease-out 0.4s both;
         }
 
         .btn-primary {
-            background: linear-gradient(45deg, var(--fly-orange), #ff7b33);
+            background: linear-gradient(45deg, #0088a6, var(--fly-blue));
             color: var(--text-white);
-            padding: 0.8rem 2rem;
+            padding: 0.8rem 2.5rem;
             border-radius: 4px;
             text-decoration: none;
             font-weight: 800;
             font-family: 'Space Grotesk', sans-serif;
             text-transform: uppercase;
-            transition: all 0.3s;
-            border: none;
-            box-shadow: 0 0 20px rgba(255, 90, 0, 0.2);
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 169, 206, 0.5);
+            box-shadow: 0 5px 20px rgba(0, 169, 206, 0.2);
             animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 0 30px rgba(255, 90, 0, 0.4);
+            box-shadow: 0 10px 30px var(--fly-blue-glow);
+            background: linear-gradient(45deg, var(--fly-blue), #00c3ed);
         }
 
         /* --- FOOTER --- */
         .site-footer {
-            background-color: #030811;
-            padding: 2rem 5%;
+            background-color: #02060b;
+            padding: 2.5rem 5%;
             text-align: center;
             border-top: 2px solid var(--fly-blue);
             animation: fadeInUp 1s ease-out 0.8s both;
+            box-shadow: 0 -10px 30px rgba(0, 169, 206, 0.05);
+        }
+
+        .corporate-structure {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .corporate-structure span {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .corporate-structure a {
+            color: var(--fly-blue);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .corporate-structure a:hover {
+            color: var(--text-white);
+            text-shadow: 0 0 10px var(--fly-blue-glow);
         }
 
         .disclaimer-text {
-            color: var(--text-muted);
-            font-size: 0.85rem;
+            color: rgba(139, 155, 180, 0.6);
+            font-size: 0.8rem;
             line-height: 1.8;
             max-width: 800px;
             margin: 0 auto;
-        }
-
-        .disclaimer-text a {
-            color: var(--fly-blue);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-
-        .disclaimer-text a:hover {
-            color: var(--fly-orange);
-            text-decoration: underline;
         }
 
         /* --- KEYFRAMES --- */
@@ -145,8 +164,9 @@
         }
 
         @media (max-width: 600px) {
-            h1.error-code { font-size: 4.5rem; }
-            h2 { font-size: 1.5rem; }
+            h1.error-code { font-size: 5rem; }
+            h2 { font-size: 1.6rem; }
+            .corporate-structure span { font-size: 0.85rem; }
         }
     </style>
 </head>
@@ -154,18 +174,22 @@
 
     <main class="main-container">
         <div class="error-icon">
-            <i class="fa-solid fa-plane-slash"></i>
+            <i class="fa-solid fa-satellite-dish"></i>
         </div>
         <h1 class="error-code">404</h1>
-        <h2>Flight Diverted.</h2>
-        <p class="subtitle">The page you are looking for is not on our radar. It may have been moved or the URL is incorrect.</p>
+        <h2>Radar Contact Lost.</h2>
+        <p class="subtitle">The digital sector you are trying to reach does not exist in our flight plan. It may have been relocated or the coordinates are incorrect.</p>
         
-        <a href="/" class="btn-primary">Return to Base</a>
+        <a href="/" class="btn-primary">Return to Headquarters</a>
     </main>
 
     <footer class="site-footer">
+        <div class="corporate-structure">
+            <span>Official Subsidiary of <a href="https://emiratesgrouproblox.link" target="_blank">Emirates Group Roblox</a></span>
+            <span>Owned & Operated by <a href="https://tylernicholasgroup.com" target="_blank">Tyler Nicholas Group</a></span>
+        </div>
         <div class="disclaimer-text">
-            &copy; 2026 flydubai Roblox. All rights reserved. This website is part of the <a href="https://tylernicholasgroup.com" target="_blank">Tyler Nicholas Group</a> community network and <a href="https://emiratesgrouproblox.link" target="_blank">Emirates Group Roblox</a>. For official community updates, announcements, and access to related projects, please visit <a href="https://tylernicholasgroup.com" target="_blank">tylernicholasgroup.com</a> and <a href="https://emiratesgrouproblox.link" target="_blank">emiratesgrouproblox.link</a>.
+            &copy; 2026 flydubai Roblox. All rights reserved. For official community updates, announcements, and access to related operations, please visit our parent networks.
         </div>
     </footer>
 
